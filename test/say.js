@@ -21,5 +21,8 @@ describe("Say problem tests", function(){
         it("should say 'twenty-one'", function(){
             expect(say(21)).to.equal("twenty-one");
         });
+        it("should say 'forty-five'", function(){
+            expect(say(45)).to.equal("forty-five");
+        });
     });
 });

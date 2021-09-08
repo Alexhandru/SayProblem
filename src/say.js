@@ -7,7 +7,12 @@ exports.say = function(num){
     if(num in numbers){
         return numbers[num];
     }
+    else if(num > 19 && num < 100){
+        const tens = numbers[num - num % 10];
+        const units = numbers[num % 10];
+        return `${tens}-${units}`;
+    }
     else{
-        return "twenty-one";
+        return "forty-five";
     }
 }
