@@ -11,4 +11,9 @@ describe("Say problem tests", function(){
             expect(say(1)).to.equal("one");
         })
     });
+    describe("Numbers between 20 - 99", function(){
+        it("should say 'twenty'", function(){
+            expect(say(20)).to.equal("twenty");
+        });
+    });
 });
