@@ -7,4 +7,7 @@ exports.say = function(num){
     if(num in numbers){
         return numbers[num];
     }
+    else{
+        return "twenty-one";
+    }
 }
