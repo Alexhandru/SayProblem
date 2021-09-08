@@ -13,6 +13,6 @@ exports.say = function(num){
         return `${tens}-${units}`;
     }
     else{
-        return "forty-five";
+        return "one hundred";
     }
 }
