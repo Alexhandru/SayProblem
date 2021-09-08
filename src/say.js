@@ -14,14 +14,15 @@ exports.say = function(num){
     }
     else if(num > 99 && num < 1000){
         const hundreds = numbers[(num - num % 100) / 100];
+        const tens = numbers[num % 100 - num % 10];
         const units = numbers[num % 10];
         if(num % 100 == 0){
             return `${hundreds} hundred`;
         } else if (num % 100 < 10){
             return `${hundreds} hundred and ${units}`;
         }
-        else{
-            return "six hundred seventy eight";
+        else {
+            return `${hundreds} hundred ${tens} ${units}`;
         }
     }
     else{
