@@ -20,6 +20,9 @@ exports.say = function(num){
         } else if (num % 100 < 10){
             return `${hundreds} hundred and ${units}`;
         }
+        else{
+            return "six hundred seventy eight";
+        }
     }
     else{
         throw new Error("Number is out of range.");
