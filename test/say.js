@@ -45,4 +45,9 @@ describe("Say problem tests", function(){
             expect(say(953)).to.equal("nine hundred fifty three");
         })
     });
+    describe("Numbers between 1000 - 999999", function(){
+        it("should say 'one thousand'", function(){
+            expect(say(1000)).to.equal("one thousand");
+        });
+    });
 });

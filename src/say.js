@@ -25,6 +25,9 @@ exports.say = function(num){
             return `${hundreds} hundred ${tens} ${units}`;
         }
     }
+    else if(num > 999 && num < 1000000){
+        return "one thousand";
+    }
     else{
         throw new Error("Number is out of range.");
     }
