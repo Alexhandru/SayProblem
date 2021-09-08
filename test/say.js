@@ -32,5 +32,8 @@ describe("Say problem tests", function(){
         it("should say 'two hundred'", function(){
             expect(say(200)).to.equal("two hundred");
         });
+        it("should say 'one hundred and one'", function(){
+            expect(say(101)).to.equal("one hundred and one");
+        });
     });
 });

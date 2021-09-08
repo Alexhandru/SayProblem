@@ -13,8 +13,13 @@ exports.say = function(num){
         return `${tens}-${units}`;
     }
     else if(num > 99 && num < 1000){
-        const hundreds = numbers[(num - num % 100) / 100];
-        return `${hundreds} hundred`;
+        if(num % 100 == 0){
+            const hundreds = numbers[(num - num % 100) / 100];
+            return `${hundreds} hundred`;
+        }
+        else{
+            return "one hundred and one";
+        }
     }
     else{
         throw new Error("Number is out of range.");
