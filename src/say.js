@@ -42,6 +42,9 @@ exports.say = function(num){
         if(num % 1000 == 0 && num < 10000){
             return `${sayOneDigit(thousands / 1000)} thousand`;
         }
+        else{
+            return "eleven thousand";
+        }
         
     }
     else{
