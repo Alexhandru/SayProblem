@@ -49,5 +49,8 @@ describe("Say problem tests", function(){
         it("should say 'one thousand'", function(){
             expect(say(1000)).to.equal("one thousand");
         });
+        it("should say 'four thousand'", function(){
+            expect(say(4000)).to.equal("four thousand");
+        });
     });
 });
