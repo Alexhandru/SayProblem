@@ -6,5 +6,5 @@ const numbers = {0: "zero", 1: "one", 2: "two", 3: "three", 4: "four", 5: "five"
 function sayOneDigit(num){
     return numbers[num];
 }
-
-console.log(`${sayOneDigit(9)}`);
+var x = 1345;
+console.log(x.toString().length);
