@@ -132,7 +132,7 @@ describe("Say problem tests", function(){
             expect(say(300_000_001_101_001)).to.equal("three hundred trillion one million one hundred and one thousand and one");
         })
         it("Should say three hundred trillion fifty million one hundred and one thousand and one", function () {
-            expect(say(300_000_000_001_001)).to.equal("three hundred trillion and one thousand and one");
+            expect(say(300_000_000_001_001)).to.equal("three hundred trillion one thousand and one");
         })
     });
 });
