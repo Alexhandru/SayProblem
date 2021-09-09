@@ -16,6 +16,15 @@ describe("Say problem tests", function(){
         it("should say 'eleven'", function(){
             expect(say(11)).to.equal("eleven");
         });
+        it("should say wrong input", function(){
+            expect(say(11.3)).to.equal("wrong input");
+        });
+        it("should say wrong input", function(){
+            expect(say("string?")).to.equal("wrong input");
+        });
+        it("should say wrong input", function(){
+            expect(say({merge:"da sau nu?"})).to.equal("wrong input");
+        });
     });
     describe("Numbers between 20 - 99", function(){
         it("should say 'twenty'", function(){
@@ -30,6 +39,7 @@ describe("Say problem tests", function(){
         it("should say 'forty-five'", function(){
             expect(say(45)).to.equal("forty-five");
         });
+        
     });
     describe("Numbers between 100 - 999", function(){
         it("should say 'one hundred'", function(){
@@ -100,5 +110,29 @@ describe("Say problem tests", function(){
         it("should say 'five hundred and five trillion four hundred and four billion three hundred and three million two hundred and two thousand one hundred and one", function(){
             expect(say(505404303202101)).to.equal("five hundred and five trillion four hundred and four billion three hundred and three million two hundred and two thousand one hundred and one");
         });
+        it("Should say three hundred trillion one billion fifty million one hundred and one thousand", function () {
+            expect(say(300_001_050_101_000)).to.equal("three hundred trillion one billion fifty million one hundred and one thousand");
+        })
+        it("Should say three trillion", function () {
+            expect(say(3_000_000_000_000)).to.equal("three trillion");
+        })
+        it("Should say three trillion one thousand", function () {
+            expect(say(3_000_000_001_000)).to.equal("three trillion one thousand");
+        })
+        it("Should say three trillion fifty million one hundred and one thousand", function () {
+            expect(say(3_000_050_101_000)).to.equal("three trillion fifty million one hundred and one thousand");
+        })
+        it("Should say three hundred trillion fifty million one hundred and one thousand", function () {
+            expect(say(300_000_050_101_000)).to.equal("three hundred trillion fifty million one hundred and one thousand");
+        })
+        it("Should say three hundred trillion fifty million one hundred and one thousand", function () {
+            expect(say(300_000_001_101_000)).to.equal("three hundred trillion one million one hundred and one thousand");
+        })
+        it("Should say three hundred trillion fifty million one hundred and one thousand and one", function () {
+            expect(say(300_000_001_101_001)).to.equal("three hundred trillion one million one hundred and one thousand and one");
+        })
+        it("Should say three hundred trillion fifty million one hundred and one thousand and one", function () {
+            expect(say(300_000_000_001_001)).to.equal("three hundred trillion and one thousand and one");
+        })
     });
 });
